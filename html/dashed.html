@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #container{
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            position: relative;
+        }
+        #animate{
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+        }
+        }
+    </style>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="hhh()">move</button>
+</br></br>
+    <p id="demo"></p>
+    <div id="container">
+        <div id="animate">
+
+        </div>
+
+
+    </div>
+    <script>
+        function hhh(){
+            var smallbox=document.getElementById('animate');
+            var pos=0;
+            var interval=setInterval(frame, 3)
+            function frame(){
+                if(pos==250)
+                clearInterval(interval);
+                pos++;
+                smallbox.style.top=pos +"px";
+                smallbox.style.left=pos +"px";
+                
+
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
